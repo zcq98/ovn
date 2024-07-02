@@ -116,7 +116,9 @@ en_global_config_run(struct engine_node *node , void *data)
     }
 
     char *max_tunid = xasprintf("%d",
-        get_ovn_max_dp_key_local(sbrec_chassis_table));
+                                get_ovn_max_dp_key_local(
+                                    is_vxlan_mode(&nb->options,
+                                                  sbrec_chassis_table)));
     smap_replace(options, "max_tunid", max_tunid);
     free(max_tunid);
 
@@ -530,6 +532,11 @@ check_nb_options_out_of_sync(const struct nbrec_nb_global *nb,
 
     if (config_out_of_sync(&nb->options, &config_data->nb_options,
                            "install_ls_lb_from_router", false)) {
+        return true;
+    }
+
+    if (config_out_of_sync(&nb->options, &config_data->nb_options,
+                           "vxlan_mode", false)) {
         return true;
     }
 

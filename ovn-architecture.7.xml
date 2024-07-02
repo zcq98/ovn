@@ -2809,11 +2809,11 @@
   </ul>
 
   <p>
-      When VXLAN is enabled on any hypervisor in a cluster, datapath and egress
-      port identifier ranges are reduced to 12-bits. This is done because only
-      STT and Geneve provide the large space for metadata (over 32 bits per
-      packet). To accommodate for VXLAN, 24 bits available are split as
-      follows:
+    When VXLAN is enabled on any hypervisor in a cluster, datapath and egress
+    port identifier ranges are reduced to 12-bits.  This is done because only
+    STT and Geneve provide the large space for metadata (over 32 bits per
+    packet).  The mode with reduced ranges is called <code>VXLAN mode</code>.
+    To accommodate for VXLAN, 24 bits available are split as follows:
   </p>
 
   <ul>
@@ -2919,5 +2919,11 @@
     defined by the VTEP schema, so fewer bits of metadata are necessary.  In
     the future, gateways that do not support encapsulations with large amounts
     of metadata may continue to have a reduced feature set.
+  </p>
+  <p>
+    <code>VXLAN mode</code> is recommended to be disabled if VXLAN encap at
+    hypervisors is needed only to support HW VTEP L2 Gateway functionality.
+    See man ovn-nb(5) for table <code>NB_Global</code> column
+    <code>options</code> key <code>vxlan_mode</code> for more details.
   </p>
 </manpage>

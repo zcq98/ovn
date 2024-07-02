@@ -298,6 +298,7 @@ Nimay Desai                        nimaydesai1@gmail.com
 Nithin Raju                        nithin@vmware.com
 Niti Rohilla                       niti.rohilla@tcs.com
 Nitin Katiyar                      nitin.katiyar@ericsson.com
+Naveen Yerramneni                  naveen.yerramneni@nutanix.com
 Numan Siddique                     nusiddiq@redhat.com
 Nobuhiro MIKI                      nmiki@yahoo-corp.jp
 Ofer Ben-Yacov                     ofer.benyacov@gmail.com
@@ -404,6 +405,7 @@ Tony van der Peet                  tony.vanderpeet@alliedtelesis.co.nz
 Tonghao Zhang                      xiangxia.m.yue@gmail.com
 Valient Gough                      vgough@pobox.com
 Vanou Ishii                        ishii.vanou@fujitsu.com
+Vasyl Saienko                      vsaienko@mirantis.com
 Veda Barrenkala                    vedabarrenkala@gmail.com
 Venkata Anil Kommaddi              vkommadi@redhat.com
 Venu Iyer                          venugopali@nvidia.com
